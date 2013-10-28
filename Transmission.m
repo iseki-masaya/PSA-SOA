@@ -1,0 +1,1 @@
+[E_fiber_out, P_fiber_out, Phase_fiber_out] = Fiber_Transmission(P_input_sig,del_t,Phase_input_sig,D_SSMF,S_SSMF,100e3,1550e-9, 1550e-9); 
