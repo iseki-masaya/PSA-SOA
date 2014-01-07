@@ -116,7 +116,7 @@ line = findobj('type','line');
 line_obj_degenerated=get(line(3));
 save line_obj_degraded.mat line_obj_degenerated;
 plot(line_obj_degenerated.XData,line_obj_degenerated.YData);
-return;
+
 %EVM measurement
 size_data = numel(line_obj_degenerated.XData);
 error_vector_deg_0=0;
