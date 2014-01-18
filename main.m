@@ -130,12 +130,8 @@ error_vector_deg = (error_vector_deg_0 + error_vector_deg_1)/2
 phase_offset_degraded_sig = abs((angle(ref_vector_deg_1)+(angle(ref_vector_deg_0)-pi))/2);
 
 E_out_filtered=E_out_filtered * exp(Im * phase_offset_degraded_sig);
-
-%Generate_Constellation(output_sig,bit_d);
-%Generate_Eyepattern(output_sig,bit_d);
-
-%P_input_sig = abs(E_out).^2;
-%Phase_input_sig = Phase_out;
+Generate_Constellation(E_out_filtered,bit_d);
+Generate_Eyepattern((E_out_filtered),bit_d);
 
 %Preamplification morep precise concideration is required
 preamp = 10;                       %gain [dB]
