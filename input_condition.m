@@ -31,9 +31,5 @@ input_level_pu2     = 15;			%input power of pump light 2 [dBm]
 
 beta                = 2*pi*c*(1/lam_pu1+1/lam_pu2-2/lam_sig)*del_t;	%phase mismatch
 
-gamma               =(16000 + eta_hosei) * eta_fwm  * 2000e-6 / div_n; %ŽÀŒ±‚É‚æ‚é”g’·ˆË‘¶‚ðŽæ‚è“ü‚ê‚½Œ‹‰Ê
-disp('previous gamma')
-disp(gamma)
-% gamma               = 2.25e5 * 2000e-6 / div_n;
-% disp('gamma')
-% disp(gamma)
+gamma               =(16000 + eta_hosei) * eta_fwm  * 2000e-6 / div_n %ŽÀŒ±‚É‚æ‚é”g’·ˆË‘¶‚ðŽæ‚è“ü‚ê‚½Œ‹‰Ê
+% gamma               = 2.25e5 * 2000e-6 / div_n
