@@ -2,6 +2,8 @@
 % Transfer Matrix Method
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+enable_debug = 0;
+
 %------------------- SOA condition -----------------
 T_for               = zeros(1,div_n - 1);
 T_back              = zeros(1,div_n - 1);
@@ -291,6 +293,20 @@ for j = 2:dat_len - 1
         A_sig(j,x) = (A_sig(j,x) + fwm_sig(j,x)) * spm_sig(j,x);
         A_pu1(j,x) = (A_pu1(j,x) + fwm_pu1(j,x)) * spm_pu1(j,x) * xpm_pu1(j,x);
         A_pu2(j,x) = (A_pu2(j,x) + fwm_pu2(j,x)) * spm_pu2(j,x) * xpm_pu2(j,x);
+    end
+    if (enable_debug == 1)
+        subplot(2,2,1);
+        plot(A_sig);
+        title('A_sig');
+        subplot(2,2,2);
+        plot(spm_sig);
+        title('spm_sig');
+        subplot(2,2,3)
+        plot(xpm_sig);
+        title('xpm_sig');
+        subplot(2,2,4);
+        plot(fwm_sig);
+        title('fwm_sig');
     end
    
 	%transfer the light to next block 
