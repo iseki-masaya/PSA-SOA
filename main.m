@@ -125,7 +125,7 @@ for iiii=1:1:size_data
 end
 error_vector_deg_0 = sqrt(error_vector_deg_0/count0)/abs(ref_vector_deg_0);
 error_vector_deg_1 = sqrt(error_vector_deg_1/count1)/abs(ref_vector_deg_1);
-error_vector_deg = (error_vector_deg_0 + error_vector_deg_1)/2;
+error_vector_deg = (error_vector_deg_0 + error_vector_deg_1)/2
 
 phase_offset_degraded_sig = abs((angle(ref_vector_deg_1)+(angle(ref_vector_deg_0)-pi))/2);
 
@@ -225,7 +225,7 @@ for iiii=1:1:size_data
 end
 error_vector_reg_0 = sqrt(error_vector_reg_0/count0)/abs(ref_vector_reg_0);
 error_vector_reg_1 = sqrt(error_vector_reg_1/count1)/abs(ref_vector_reg_1);
-error_vector_reg=(error_vector_reg_0 + error_vector_reg_1)/2;
+error_vector_reg=(error_vector_reg_0 + error_vector_reg_1)/2
 
 Generate_Eyepattern((E_out_sig_filtered),bit_d);
 [output_sig,Q]=DPSK_receiver(E_out_sig_filtered,bit_d);
