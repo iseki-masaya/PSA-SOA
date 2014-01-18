@@ -225,7 +225,7 @@ for iiii=1:1:size_data
 end
 error_vector_reg_0 = sqrt(error_vector_reg_0/count0)/abs(ref_vector_reg_0);
 error_vector_reg_1 = sqrt(error_vector_reg_1/count1)/abs(ref_vector_reg_1);
-error_vector_reg=(error_vector_reg_0 + error_vector_reg_1)/2
+error_vector_reg = (error_vector_reg_0 + error_vector_reg_1)/2
 
 Generate_Eyepattern((E_out_sig_filtered),bit_d);
 [output_sig,Q]=DPSK_receiver(E_out_sig_filtered,bit_d);
@@ -234,6 +234,7 @@ sigma = get_sigma(E_out_sig_filtered,bit_d);
 ASE_spectral = zeros(30,1);
 ASE_spectral_axis = zeros(30,1);
 for ii=1:30
+    ASE_spectral(ii,1)=P_for_ase(dat_len,div_n,ii);
     ASE_spectral(ii,1)=10 * log10(ASE_spectral(ii,1)/1e-3);
     ASE_spectral_axis(ii,1)=(1503+(ii-1)*4)*1e-9;
 end
