@@ -274,6 +274,7 @@ for j = 2:dat_len - 1
 
 	%affecting the nonlinearly fenomenon
 	for x = 1:div_n-1
+        %äpìxïœâªÇæÇØÇ»ÇÁÇŒÅAangle(A_sig(j,x))ÇæÇØÇ≈ÇÊÇ¢ÅB
         spm_sig(j,x)    = 1*exp(Im*gamma*(abs(A_sig(j,x)))^2*A_sig(j,x));
         spm_pu1(j,x)    = 1*exp(Im*gamma*(abs(A_pu1(j,x)))^2*A_pu1(j,x));
         spm_pu2(j,x)    = 1*exp(Im*gamma*(abs(A_pu2(j,x)))^2*A_pu2(j,x));
